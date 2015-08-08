@@ -1,6 +1,6 @@
-# fuck an ireverent password manager
+# "fuck", an ireverent password manager
 
-Derived from the pwd.sh password manager, fuck adds a non-interactive mode, with clipboard integration with Macs, and flexible password store capabilities
+Derived from the pwd.sh password manager, fuck adds a non-interactive mode with clipboard integration with Macs, and more flexible password store capabilities
 
 
 # Installation
