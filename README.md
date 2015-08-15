@@ -10,15 +10,15 @@ Derived from the pwd.sh password manager, fuck adds a non-interactive mode with 
     from /usr/local/bin
 
     ln -s {path to fuck}/fuck
-    
-Requires `gpg`
 
-Install with `brew install gpg` or `sudo apt-get install gnupg` or build and install it from [source](https://www.gnupg.org/download/index.html).
+Requires `gpg` and `boxes`
+
+Install with `brew install gpg` and `brew install boxes`.
 
 # Use
 
 Run the script interactively with `fuck` or `fuck all`
-    
+
 Type `w` to write a password.
 
 Type `r` to read a password or all passwords.

@@ -86,7 +86,7 @@ read_pass () {
   Enter master password: "
     printf "\n\n"
     if [[ ${#args[@]} == 0 || ${args[0]} == 'all' ]]; then
-      decrypt ${password} ${safe} | grep " ${username}" | column -t || fail "Decryption failed"
+      decrypt ${password} ${safe} | grep " ${username}" | column -t | boxes || fail "Decryption failed"
     else
       decrypt ${password} ${safe} | grep " ${username}" | awk '{print $1}' | pbcopy || fail "Decryption failed"
       # sed 's/[whitespace]*$//'
@@ -174,17 +174,17 @@ chatty () {
   if [[ ${#args[@]} == 0 ]]
     then
     i=$(expr $RANDOM % 8);
-    echo ${arr_unknown[$i]};
+    echo ${arr_unknown[$i]} | boxes -d unicornsay;
   elif [[ ${#args[@]} == 1 ]]
     then
     declare -a arr_known=("Why do you torture ${args[0]}?" "You force me to do this to ${args[0]}!" "Poor ${args[0]}...");
     i=$(expr $RANDOM % 3);
-    echo ${arr_known[$i]};
+    echo ${arr_known[$i]} | boxes -d unicornsay;
   elif [[ ${#args[@]} == 2 ]]
     then
     declare -a arr_both=("You do not do such things to ${args[0]} ${args[1]}!" "No matter how ${args[1]} you are this is a horrible things to do to ${args[0]}!" "${args[1]}8===>${args[0]}");
     i=$(expr $RANDOM % 3);
-    echo ${arr_both[$i]};
+    echo ${arr_both[$i]} | boxes -d unicornsay;
   fi
 }
 
